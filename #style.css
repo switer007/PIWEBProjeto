@@ -1,0 +1,10 @@
+.table {
+    background-color: #fadacd;
+    background-color: #9EDDCC;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin-left: -500px;
+}

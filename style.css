@@ -1,0 +1,108 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fadacd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color: #9EDDCC;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin-left: -500px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Garante que o padding não afete a largura total */
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: #dc3545;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9em;
+    height: 20px; /* Garante espaço mesmo quando não há erro */
+}
+
+.img-fluid {
+    margin-top: -700px;
+    margin-left: 700px;
+
+}
+.logincontainer {
+    background-color: #9EDDCC ;
+    margin-left: -700px;
+    margin-right: 200px
+}
+
+.table {
+    background-color: #fadacd;
+    background-color: #9EDDCC;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin-left: -500px;
+}
+.painel {
+     background-color: #9EDDCC;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin-left: -500px;
+}
+.col-md-9 {
+    
+}
