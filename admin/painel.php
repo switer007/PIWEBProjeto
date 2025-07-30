@@ -52,7 +52,7 @@ session_start();
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Busca" aria-label="Search"/>
-                    <button class="btn btn-secondary" type="submit">Busca</button>
+                    <button class="btn btn-dark" type="submit">Busca</button>
                 </form>
             </div>
         </div>
@@ -83,10 +83,10 @@ session_start();
             <div class="row align-items-center">
                 <div class="col-md-3 text-center">
                     <h2>Painel administrativo</h2>
-                    <h3>Olá, <?php echo $_SESSION['login']; ?> </h3><a href="logout.php" class="btn btn-outline-secondary">Sair</a><br>
+                    <h3>Olá, <?php echo $_SESSION['login']; ?> </h3><a href="logout.php" class="btn btn-dark">Sair</a><br>
                 </div>
                 <div class="col-md-9 border-start border-1 text-center">
-                    <p><a href="frmCadastrarUsuarios.php" class="btn btn-secondary">Cadastrar usuários</a> <a href="listarUsuarios.php" class="btn btn-secondary">Lista Usuário</a> <a href="frmCadastrarNoticias.php" class="btn btn-secondary">Cadastro Vitrini</a> <a href="listarNoticias.php" class="btn btn-secondary">Lista Vitrini</a></p>
+                    <p><a href="frmCadastrarUsuarios.php" class="btn btn-dark">Cadastrar usuários</a> <a href="listarUsuarios.php" class="btn btn-dark">Lista Usuário</a> <a href="frmCadastrarNoticias.php" class="btn btn-dark">Cadastro Vitrini</a> <a href="listarNoticias.php" class="btn btn-dark">Lista Vitrini</a></p>
                 </div>
             </div>
 
