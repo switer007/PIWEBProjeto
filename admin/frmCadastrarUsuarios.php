@@ -1,7 +1,5 @@
 <?php
-
-session_start();
-
+    include("verifica.php");
 ?>
 
 <!DOCTYPE html>
@@ -16,8 +14,6 @@ session_start();
 </head>
 <body>
     <!-- Navegação -->
-    
-    <!-- cabeçalho -->
     <section id="cabecalho">
     <div class="container">
         <div class="row">
@@ -41,8 +37,22 @@ session_start();
                     <h2>Painel administrativo</h2>
                     <h3>Olá, <?php echo $_SESSION['login']; ?> </h3><a href="logout.php" class="btn btn-outline-secondary">Sair</a><br>
                 </div>
-                <div class="col-md-9 border-start border-1 text-center">
-                    <p><a href="frmCadastrarUsuarios.php" class="btn btn-dark">Cadastrar usuários</a> <a href="listarUsuarios.php" class="btn btn-dark">Listar usuários</a> <a href="frmCadastrarNoticias.php" class="btn btn-dark">Cadastrar Vitrini</a> <a href="listarNoticias.php" class="btn btn-dark">Listar Vitrini</a></p>
+                <div class="col-md-9 border-start border-1">
+                    <p><a href="frmCadastrarUsuarios.php" class="btn btn-dark">Cadastrar usuários</a> <a href="listarUsuarios.php" class="btn btn-dark">Listar usuários</a> <a href="frmCadastrarNoticias.php" class="btn btn-dark">Cadastrar notícias</a> <a href="listarNoticias.php" class="btn btn-dark">Listar notícias</a></p>
+                    <h2>Cadastro de Usuários</h2>
+                    <div class="col">
+                        <form action="inserirUsuarios.php" method="post">
+                            <label for="nomeCompleto" class="form-label">Nome Completo</label>
+                            <input type="text" name="nome" id="nome" class="form-control"><br>
+                            <label for="E-mail" class="form-label">E-mail</label>
+                            <input type="email" name="email" id="email" class="form-control"><br>
+                            <label for="login" class="form-label">Login</label><br>
+                            <input type="text" name="login" id="login" class="form-control"><br>
+                            <label for="senha" class="form-label">Senha</label>
+                            <input type="password" name="pwd" id="pwd" class="form-control"><br><br>
+                            <button type="submit" name="cadastroUsuario" class="btn btn-dark">Cadastrar</button>
+                        </form>
+                    </div>
                 </div>
             </div>
 

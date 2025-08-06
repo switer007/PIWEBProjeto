@@ -1,5 +1,6 @@
-<?php 
-    session_start();
+<?php
+    include ("verifica.php");
+    include ("../banco/conexao.php");
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -70,32 +71,65 @@
                 <div class=" text-center border border-1 rounded p-2 m-3">
                     <h4>Dólar Hoje</h4><p><strong><?php include ('../cotacao.php'); ?></strong></p>
                 </div>
+               
             </div>
         </div>
         <hr>
     </div>
     </section>
-    <!-- login -->
-    <section id="entrar">
+    <!-- painel -->
+    <section id="painel">
         <div class="container">
-            <div class="col-md-4">
-                <h2>Login</h2>
-                <?php
-                    if (isset($_SESSION['nao_autenticado'])):
-                ?>
-                <div class="alert alert-danger">Usuário e/ou senha inválidos</div>
-                <?php
-                    // Remove a variável da sessão para que a mensagem não apareça novamente
-                    unset($_SESSION['nao_autenticado']);
-                    endif;
-                ?>
-                <form action="login.php" method="post">
-                    <label for="login" class="form-label">Usuário</label><br>
-                    <input type="text" name="login" id="login" class="form-control" required><br>
-                    <label for="pwd" class="form-label">Senha</label><br>
-                    <input type="password" name="pwd" id="pwd" class="form-control" required><br><br>
-                    <button type="submit" class="btn btn-secondary">Entrar</button>
-                </form>
+            <div class="row align-items-center">
+                <div class="col-md-3 text-center">
+                    <h2>Painel administrativo</h2>
+                    <h3>Olá, <?php echo $_SESSION['login']; ?> </h3><a href="logout.php" class="btn btn-outline-secondary">Sair</a><br>
+                </div>
+                <div class="col-md-9 border-start border-1">
+                    <p><a href="frmCadastrarUsuarios.php" class="btn btn-secondary">Cadastrar usuários</a> <a href="listarUsuarios.php" class="btn btn-secondary">Listar usuários</a> <a href="frmCadastrarNoticias.php" class="btn btn-secondary">Cadastrar notícias</a> <a href="listarNoticias.php" class="btn btn-secondary">Listar notícias</a></p>
+                    <h2>Ver Usuários</h2>
+                    <?php
+                        if(isset($_GET['idUsuario'])) {
+                            $usuario_id = mysqli_real_escape_string($conexao, $_GET['idUsuario']);
+                            $sql = "SELECT * FROM usuarios WHERE idUsuario = '$usuario_id'";
+                            $query = mysqli_query($conexao, $sql);
+
+                            if (mysqli_num_rows($query) > 0) {
+                                $usuario = mysqli_fetch_array($query);
+                                //var_dump($usuario);
+                    ?>
+                                <!-- HTML -->
+                                <div class="row g-3">
+                                    <div class="col-sm">
+                                        <label for="nomeUsuario" class="form-label">Nome Completo</label>
+                                        <p class="form-control"><?= $usuario['nomeUsuario']?></p>
+                                    </div>
+                                </div>
+                                <div class="row g-3">
+                                    <div class="col-sm">
+                                        <label for="emailUsuario" class="form-label">E-mail</label>
+                                        <p class="form-control"><?= $usuario['emailUsuario']?></p>
+                                    </div>
+                                </div>
+                                <div class="row g-3">
+                                    <div class="col-sm">
+                                        <label for="loginUsuario" class="form-label">Login</label>
+                                        <p class="form-control"><?= $usuario['loginUsuario']?></p>
+                                    </div>
+                                </div>
+                                <div class="row g-3">
+                                    <div class="col-sm">
+                                        <label for="senhaUsuario" class="form-label">Senha</label>
+                                        <p class="form-control"><?= "...".substr($usuario['senhaUsuario'], 10, 8)."..."?></p>
+                                    </div>
+                                </div>
+                    <?php
+                            } else {
+                                echo "<h5>Usuário não encontrado!</h5>";
+                            }
+                        }
+                    ?>
+                </div>
             </div>
             <hr>
         </div>
@@ -106,6 +140,8 @@
             <p>Copyright © 2025. Orgulhosamente feito com <i class="bi bi-heart-fill"></i> na Terra do Saci.</p>
         </div>
     </section>
+
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
 </html>
