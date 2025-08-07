@@ -42,7 +42,7 @@ session_start();
                     <h3>Olá, <?php echo $_SESSION['login']; ?> </h3><a href="logout.php" class="btn btn-outline-secondary">Sair</a><br>
                 </div>
                 <div class="col-md-9 border-start border-1 text-center">
-                    <p><a href="frmCadastrarUsuarios.php" class="btn btn-dark">Cadastrar usuários</a> <a href="listarUsuarios.php" class="btn btn-dark">Listar usuários</a> <a href="frmCadastrarNoticias.php" class="btn btn-dark">Cadastrar Vitrini</a> <a href="listarNoticias.php" class="btn btn-dark">Listar Vitrini</a></p>
+                    <p><a href="frmCadastrarUsuarios.php" class="btn btn-dark">Cadastrar usuários</a> <a href="listarUsuarios.php" class="btn btn-dark">Listar usuários</a> <a href="frmCadastrarVitrini.php" class="btn btn-dark">Cadastrar Vitrini</a> <a href="listarVitrini.php" class="btn btn-dark">Listar Vitrini</a></p>
                 </div>
             </div>
 
