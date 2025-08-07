@@ -38,7 +38,7 @@
                     <h3>Olá, <?php echo $_SESSION['login']; ?> </h3><a href="logout.php" class="btn btn-outline-secondary">Sair</a><br>
                 </div>
                 <div class="col-md-9 border-start border-1">
-                    <p><a href="frmCadastrarUsuarios.php" class="btn btn-dark">Cadastrar usuários</a> <a href="listarUsuarios.php" class="btn btn-dark">Listar usuários</a> <a href="frmCadastrarNoticias.php" class="btn btn-dark">Cadastrar notícias</a> <a href="listarNoticias.php" class="btn btn-dark">Listar notícias</a></p>
+                    <p><a href="frmCadastrarUsuarios.php" class="btn btn-dark">Cadastrar usuários</a> <a href="listarUsuarios.php" class="btn btn-dark">Listar usuários</a> <a href="frmCadastrarNoticias.php" class="btn btn-dark">Cadastrar Vitrini</a> <a href="listarNoticias.php" class="btn btn-dark">Listar Vitrini</a></p>
                     <h2>Cadastro de Usuários</h2>
                     <div class="col">
                         <form action="inserirUsuarios.php" method="post">

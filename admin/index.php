@@ -9,7 +9,7 @@
     <title>Notícias NEWS</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <!-- Navegação -->
@@ -50,7 +50,7 @@
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Busca" aria-label="Search"/>
-                    <button class="btn btn-secondary" type="submit">Busca</button>
+                    <button class="btn btn-dark" type="submit">Busca</button>
                 </form>
             </div>
         </div>
@@ -61,14 +61,14 @@
     <div class="container">
         <div class="row">
             <div class="col-md-2">
-                <img src="../imagens/logo.png" width="100px">
+                <img src="../imagens/logoweb.png" width="700px">
             </div>
             <div class="col-md-8">
                 
             </div>
             <div class="col-md-2">
                 <div class=" text-center border border-1 rounded p-2 m-3">
-                    <h4>Dólar Hoje</h4><p><strong><?php include ('../cotacao.php'); ?></strong></p>
+                    
                 </div>
             </div>
         </div>
@@ -94,7 +94,7 @@
                     <input type="text" name="login" id="login" class="form-control" required><br>
                     <label for="pwd" class="form-label">Senha</label><br>
                     <input type="password" name="pwd" id="pwd" class="form-control" required><br><br>
-                    <button type="submit" class="btn btn-secondary">Entrar</button>
+                    <button type="submit" class="btn btn-dark">Entrar</button>
                 </form>
             </div>
             <hr>
